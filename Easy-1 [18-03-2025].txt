@@ -1,0 +1,21 @@
+Question:  Two Sum
+
+code:
+
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+         int n=nums.length;
+        int arr[]=new int[2];
+        for(int i=1;i<n;i++)
+        {
+            for(int j=i;j<n;j++)
+            {
+                if(nums[j]+nums[j-i]==target)
+                {
+                   return new int[]{j,j-i}; 
+                }
+            }
+        }
+        return new int[]{};
+    }
+}
